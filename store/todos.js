@@ -26,3 +26,9 @@ export const actions = {
         done: !todo.done
     })})
 }
+
+export const getters = {
+    orderedTodos: state => {
+        return _.sortBy(state.todos, 'created')
+    }
+}
